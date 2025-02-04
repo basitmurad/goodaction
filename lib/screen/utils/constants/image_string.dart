@@ -11,5 +11,7 @@ class GImages {
   static const  String frame = "assets/svgiocon/frame.svg";
   static const String frame_2 = "assets/svgiocon/frame_2.svg";
   static const String frame_1  = "assets/svgiocon/frame_1.svg";
+  static const String profile  = "assets/images/profile.png";
+  static const String img  = "assets/images/img.png";
 
 }

@@ -21,6 +21,9 @@ class GText {
 
   // static const String noAccountText = "No account ?";
   static const String signUpText = "Sign up";
+  static const String enterLocation = "Use your current location";
+  static const String setLocation = "Set Your Location Preference";
+  static const String setLocationDes = "Tailor your feed to show opportunities that matter most to you.";
   static const String betheChange = "Be the Change – Join GoodAction Today!";
 
   static const String  alreadyHaveAccount= "Already have account ?";

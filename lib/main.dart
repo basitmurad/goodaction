@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:goodaction/screen/dashboard/dashboard.dart';
+import 'package:goodaction/screen/location/location_screen.dart';
 import 'package:goodaction/screen/login/login_screen.dart';
+import 'package:goodaction/screen/post/post.dart';
 import 'package:goodaction/screen/splash.dart';
 import 'package:goodaction/screen/utils/constants/colors.dart';
 
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
 
         useMaterial3: true,
       ),
-      home: Dashboard(),
+      home: NavigationMenu(),
     );
   }
 }

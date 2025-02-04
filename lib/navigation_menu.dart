@@ -1,57 +1,9 @@
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-// import 'package:goodaction/screen/dashboard/dashboard.dart';
-//
-// class NavigationMenu extends StatelessWidget {
-//   const NavigationMenu({super.key, });
-//   // final User? user;
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     final controller = Get.put(NavigationController());
-//     return Scaffold(
-//       bottomNavigationBar: Obx(
-//             () => NavigationBar(
-//           height: 60,
-//           elevation: 0,
-//           selectedIndex: controller.selectedIndex.value,
-//
-//           onDestinationSelected: (index) {
-//             // Check index bounds before assigning
-//             if (index >= 0 && index < controller.screens.length) {
-//               controller.selectedIndex.value = index;
-//             }
-//           },
-//           destinations: const [
-//             NavigationDestination(icon: Icon(Icons.explore, size: 20), label: 'Home'),
-//             NavigationDestination(icon: Icon(Icons.post_add, size: 20), label: 'Search'),
-//             NavigationDestination(icon: Icon(Icons.search, size: 20), label: 'Social'),
-//             NavigationDestination(icon: Icon(Icons.safety_divider_rounded, size: 20), label: 'Profile'),
-//           ],
-//         ),
-//       ),
-//       body: Obx(() => controller.screens[controller.selectedIndex.value]),
-//     );
-//   }
-// }
-//
-//
-// class NavigationController extends GetxController {
-//   final Rx<int> selectedIndex = 0.obs;
-//
-//   final List<Widget> screens = [
-//     const Dashboard(),
-//      Container(color: Colors.green,),
-//      Container(color: Colors.red,),
-//      Container(
-//        color: Colors.orange,
-//      ),
-//   ];
-// }
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:goodaction/screen/dashboard/dashboard.dart';
+import 'package:goodaction/screen/initiatives/screens/initiatives.dart';
+import 'package:goodaction/screen/post/post.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -66,6 +18,8 @@ class NavigationMenu extends StatelessWidget {
       // Floating Action Button
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+
+          Get.to(() => Post());
           // Handle FAB action
         },
         backgroundColor: Colors.black, // Customize FAB color
@@ -73,6 +27,7 @@ class NavigationMenu extends StatelessWidget {
         child: const Icon(Icons.add, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
 
       // Bottom Navigation Bar with Proper Center Alignment
       bottomNavigationBar: Container(
@@ -146,7 +101,7 @@ class NavigationController extends GetxController {
 
   final List<Widget> screens = [
     const Dashboard(),
-    Container(color: Colors.green),
+    InitiativesScreen(),
     Container(color: Colors.red),
     Container(color: Colors.orange),
   ];

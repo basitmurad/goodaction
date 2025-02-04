@@ -22,6 +22,7 @@ dependencies:
   get: ^4.6.6
   flutter_native_splash: ^2.4.4
   flutter_svg: ^2.0.17
+  iconsax: ^0.0.8
 
 
 dev_dependencies:
@@ -50,6 +51,8 @@ flutter:
         - asset: assets/icons/font/inter/Inter_18pt-SemiBold.ttf
           weight: 900
         - asset: assets/icons/font/inter/Inter_18pt-SemiBold.ttf
+          weight: 800
+        - asset: assets/icons/font/inter/Inter_18pt-Regular.ttf
           weight: 700
         - asset: assets/icons/font/inter/Inter_18pt-Regular.ttf
           weight: 600

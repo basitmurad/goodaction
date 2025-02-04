@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:goodaction/screen/login/login_screen.dart';
 import '../../utils/constants/app_text_style.dart';
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/text_strings.dart';
@@ -27,13 +28,17 @@ class Footer extends StatelessWidget {
           height: GSizes.lg + 10,
           width: GSizes.lg -12,
         ),
-        Text(
+
+        TextButton(onPressed: (){
+          Get.to(()=>LoginScreen());
+        }, child:         Text(
           GText.login, // Corrected spelling from "Ligin"
           style: AppTextStyle.inter(
               color: Colors.green,
               fontSize: 16.0,
               weight: FontWeight.w700),
         ),
+        )
       ],
     );
   }

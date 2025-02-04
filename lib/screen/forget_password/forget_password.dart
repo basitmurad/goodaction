@@ -23,6 +23,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
       backgroundColor: GAppColors.backColor,
 
       appBar: AppBar(
+        backgroundColor: GAppColors.backColor,
+
         automaticallyImplyLeading: false,
         leading: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.back)),
       ),
@@ -63,7 +65,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 foregroundColor: Colors.white,
                 // Text color
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12), // Rounded corners
+                  borderRadius: BorderRadius.circular(6), // Rounded corners
                 ),
               ),
               child:

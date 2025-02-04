@@ -73,7 +73,7 @@ class _EmailSendSendScreenState extends State<EmailSendSendScreen> {
                       backgroundColor: GAppColors.buttonColor,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12), // Rounded corners
+                        borderRadius: BorderRadius.circular(6), // Rounded corners
                       ),
 
 

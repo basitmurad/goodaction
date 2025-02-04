@@ -50,8 +50,7 @@ class SignUpWidget extends StatelessWidget {
               foregroundColor: Colors.white,
               // Text color
               shape: RoundedRectangleBorder(
-                borderRadius:
-                BorderRadius.circular(12), // Rounded corners
+                  borderRadius: BorderRadius.circular(6), // Rounded corners
               ),
             ),
             child: Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:goodaction/navigation_menu.dart';
 import 'package:goodaction/screen/forget_password/forget_password.dart';
 import 'package:goodaction/screen/login/widgets/FooterSection.dart';
 import 'package:goodaction/screen/login/widgets/HeaderPart.dart';
@@ -40,33 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               HeaderPart(),
               FormWidget(),
-              SizedBox(
-                height: GSizes.lg + 20,
-              ),
-              SizedBox(
-                width: double.infinity,
-                height: 48,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: GAppColors.buttonColor,
-                    // Button background color
-                    foregroundColor: Colors.white,
-                    // Text color
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(12), // Rounded corners
-                    ),
-                  ),
-                  child: Text(
-                    GText.login, // Corrected spelling from "Ligin"
-                    style: AppTextStyle.inter(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        weight: FontWeight.w500),
-                  ),
-                ),
-              ),
+
               SizedBox(
                 height: GSizes.lg + 10,
                 width: 3,
@@ -80,10 +55,17 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-class FormWidget extends StatelessWidget {
+class FormWidget extends StatefulWidget {
   const FormWidget({
     super.key,
   });
+
+  @override
+  State<FormWidget> createState() => _FormWidgetState();
+}
+
+class _FormWidgetState extends State<FormWidget> {
+  bool _isObscure = true; // Initial state (password hidden)
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +81,19 @@ class FormWidget extends StatelessWidget {
         TextFieldWidget(
           subTitle: GText.password,
           hintText: GText.enterYourPassword,
-          suffixIcon: Icon(CupertinoIcons.eye_slash),
+          obscureText: _isObscure, // Use the state variable
+          suffixIcon: GestureDetector(
+            onTap: () {
+              setState(() {
+                _isObscure = !_isObscure; // Toggle password visibility
+              });
+            },
+            child: Icon(
+              _isObscure
+                  ? CupertinoIcons.eye_slash
+                  : CupertinoIcons.eye, // Change icon dynamically
+            ),
+          ),
         ),
         SizedBox(
           height: GSizes.lg - 10,
@@ -117,6 +111,39 @@ class FormWidget extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(
+          height: GSizes.lg + 20,
+        ),
+
+        SizedBox(
+          width: double.infinity,
+          height: 48,
+          child: ElevatedButton(
+            onPressed: () {
+
+              Get.to(NavigationMenu());
+
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: GAppColors.buttonColor,
+              // Button background color
+              foregroundColor: Colors.white,
+              // Text color
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(6), // Rounded corners
+// Rounded corners
+              ),
+            ),
+            child: Text(
+              GText.login, // Corrected spelling from "Ligin"
+              style: AppTextStyle.inter(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                  weight: FontWeight.w500),
+            ),
+          ),
+        ),
+
       ],
     );
   }

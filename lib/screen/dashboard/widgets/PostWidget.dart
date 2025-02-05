@@ -16,7 +16,8 @@ class _PostWidgetState extends State<PostWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return
+      Container(
       margin: EdgeInsets.symmetric(vertical: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,9 +61,6 @@ class _PostWidgetState extends State<PostWidget> {
 
           SizedBox(height: GSizes.xs + 4),
 
-          /// Expandable Text
-
-          /// Image
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.asset(
@@ -124,7 +122,7 @@ class _PostWidgetState extends State<PostWidget> {
             },
           ),
 
-          /// Like & Share Buttons
+          /// Like & comment Buttons
           Row(
             children: [
               IconButton(
@@ -165,9 +163,10 @@ class _PostWidgetState extends State<PostWidget> {
               ),
 
 
+              
             ],
           ),
-          
+
           Container(height: 2,color: Colors.black,)
         ],
       ),

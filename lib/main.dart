@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:goodaction/screen/dashboard/dashboard.dart';
+import 'package:goodaction/screen/dashboard/post_detail.dart';
 import 'package:goodaction/screen/location/location_screen.dart';
 import 'package:goodaction/screen/login/login_screen.dart';
 import 'package:goodaction/screen/post/post.dart';
@@ -28,13 +29,11 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false, // Hides the debug banner
-
       title: 'Flutter Demo',
       theme: ThemeData(
-
         useMaterial3: true,
       ),
-      home: NavigationMenu(),
+      home: PostDetail(),
     );
   }
 }

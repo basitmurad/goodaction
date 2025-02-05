@@ -42,10 +42,10 @@ class NavigationMenu extends StatelessWidget {
                 bottomNavItem(
                     "assets/svgiocon/el_puzzle.svg", "Home", 0, controller),
                 bottomNavItem(
-                    "assets/svgiocon/frame.svg", "Search", 1, controller),
+                    "assets/svgiocon/frame.svg", "Initatives", 1, controller),
                 const SizedBox(width: 40), // ✅ Space for FAB in center
                 bottomNavItem(
-                    "assets/svgiocon/frame_1.svg", "Social", 2, controller),
+                    "assets/svgiocon/frame_1.svg", "Forum", 2, controller),
                 bottomNavItem(
                     "assets/svgiocon/frame_2.svg", "Profile", 3, controller),
               ],

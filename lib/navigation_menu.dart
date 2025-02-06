@@ -20,7 +20,6 @@ class NavigationMenu extends StatelessWidget {
         onPressed: () {
 
           Get.to(() => Post());
-          // Handle FAB action
         },
         backgroundColor: Colors.black, // Customize FAB color
         shape: const CircleBorder(), // Keeps FAB circular
@@ -29,12 +28,13 @@ class NavigationMenu extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
 
-      // Bottom Navigation Bar with Proper Center Alignment
+
+
       bottomNavigationBar: Container(
-        height: 70, // ✅ Adjusted height for perfect balance
+        height: 70,
         child: BottomAppBar(
           shape: const CircularNotchedRectangle(), // Creates FAB cutout
-          notchMargin: 10, // ✅ Adjust space around FAB
+          notchMargin: 10,
           child: Obx(
                 () => Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -43,7 +43,7 @@ class NavigationMenu extends StatelessWidget {
                     "assets/svgiocon/el_puzzle.svg", "Home", 0, controller),
                 bottomNavItem(
                     "assets/svgiocon/frame.svg", "Initatives", 1, controller),
-                const SizedBox(width: 40), // ✅ Space for FAB in center
+                const SizedBox(width: 40),
                 bottomNavItem(
                     "assets/svgiocon/frame_1.svg", "Forum", 2, controller),
                 bottomNavItem(
@@ -56,7 +56,6 @@ class NavigationMenu extends StatelessWidget {
     );
   }
 
-  // Custom Bottom Navigation Item with Fixed Height
   Widget bottomNavItem(
       String iconPath, String label, int index, NavigationController controller) {
     bool isSelected = controller.selectedIndex.value == index;
@@ -66,7 +65,7 @@ class NavigationMenu extends StatelessWidget {
         controller.selectedIndex.value = index;
       },
       child: SizedBox(
-        height: 60, // ✅ Prevents overflow & aligns items properly
+        height: 60,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -79,7 +78,7 @@ class NavigationMenu extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            const SizedBox(height: 4), // ✅ Avoids overlap
+            const SizedBox(height: 4),
             Text(
               label,
               style: TextStyle(
@@ -95,7 +94,6 @@ class NavigationMenu extends StatelessWidget {
   }
 }
 
-// Navigation Controller with Screens
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 

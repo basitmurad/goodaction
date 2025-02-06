@@ -16,8 +16,15 @@ class _PostWidgetState extends State<PostWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return
-      Container(
+    return Container(
+
+
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        border: Border.all(color: Colors.black.withValues(alpha: 0.1), width: 1),
+      ),
+      padding: EdgeInsets.all(12),
+
       margin: EdgeInsets.symmetric(vertical: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +33,8 @@ class _PostWidgetState extends State<PostWidget> {
           Row(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(12), // Rounded profile image
+                borderRadius: BorderRadius.circular(12),
+                // Rounded profile image
                 child: Image.asset(
                   GImages.profile, // Replace with GImages.profile
                   height: 46,
@@ -98,8 +106,9 @@ class _PostWidgetState extends State<PostWidget> {
                   Text(
                     text,
                     maxLines: isExpanded ? null : 2,
-                    overflow:
-                    isExpanded ? TextOverflow.visible : TextOverflow.ellipsis,
+                    overflow: isExpanded
+                        ? TextOverflow.visible
+                        : TextOverflow.ellipsis,
                     style: TextStyle(color: Colors.black, fontSize: 16),
                   ),
                   if (isTextOverflowing)
@@ -134,7 +143,9 @@ class _PostWidgetState extends State<PostWidget> {
               Text(
                 '34',
                 style: AppTextStyle.inter(
-                    color: Colors.black, fontSize: 14.0, weight: FontWeight.w400),
+                    color: Colors.black,
+                    fontSize: 14.0,
+                    weight: FontWeight.w400),
               ),
               SizedBox(
                 width: 16,
@@ -159,15 +170,13 @@ class _PostWidgetState extends State<PostWidget> {
               Text(
                 '34',
                 style: AppTextStyle.inter(
-                    color: Colors.black, fontSize: 14.0, weight: FontWeight.w400),
+                    color: Colors.black,
+                    fontSize: 14.0,
+                    weight: FontWeight.w400),
               ),
-
-
-              
             ],
           ),
-
-          Container(height: 2,color: Colors.black,)
+          
         ],
       ),
     );

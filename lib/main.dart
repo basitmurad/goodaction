@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:goodaction/screen/dashboard/dashboard.dart';
 import 'package:goodaction/screen/dashboard/post_detail.dart';
+import 'package:goodaction/screen/initiatives/screens/donation_detail_screen.dart';
+import 'package:goodaction/screen/initiatives/screens/donation_now_screen.dart';
 import 'package:goodaction/screen/location/location_screen.dart';
 import 'package:goodaction/screen/login/login_screen.dart';
 import 'package:goodaction/screen/post/post.dart';
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: PostDetail(),
+      home: LoginScreen(),
     );
   }
 }

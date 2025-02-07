@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:goodaction/screen/dashboard/post_detail.dart';
 import '../../utils/constants/app_text_style.dart';
 import '../../utils/constants/image_string.dart';
 import '../../utils/constants/sizes.dart';
@@ -152,8 +155,9 @@ class _PostWidgetState extends State<PostWidget> {
               ),
               GestureDetector(
                 onTap: () {
-                  print("Clear ");
-                },
+
+                  Get.to(PostDetail());
+                  },
                 child: SvgPicture.asset(
                   "assets/svgiocon/message.svg",
                   width: 24,

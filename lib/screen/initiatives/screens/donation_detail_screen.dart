@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:goodaction/screen/initiatives/screens/donation_now_screen.dart';
 import 'package:goodaction/screen/initiatives/widgets/character_image_widget.dart';
 import 'package:goodaction/screen/initiatives/widgets/expandable_text_widget.dart';
 import '../../utils/constants/app_text_style.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/image_string.dart';
 import '../../utils/constants/sizes.dart';
-import '../../utils/constants/text_strings.dart';
 import '../widgets/donation_widget.dart';
 
 class DonationDetailScreen extends StatefulWidget {
@@ -20,10 +21,46 @@ class _DonationDetailScreenState extends State<DonationDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar:                    Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24,horizontal: 24),
+        child: SizedBox(
+          width: double.infinity,
+          height: 48,
+          child: ElevatedButton(
+            onPressed: () {
+
+              Get.to(()=>DonationNowScreen());
+
+
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: GAppColors.buttonColor,
+              // Button background color
+              foregroundColor: Colors.white,
+              // Text color
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                BorderRadius.circular(6), // Rounded corners
+              ),
+            ),
+            child: Text(
+              "Donation Now", // Corrected spelling from "Ligin"
+              style: AppTextStyle.inter(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                  weight: FontWeight.w500),
+            ),
+          ),
+        ),
+      ),
+
         appBar: AppBar(
           automaticallyImplyLeading: false,
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+
+                Get.back();
+              },
               icon: Icon(
                 CupertinoIcons.arrow_left,
                 color: Colors.black,
@@ -181,30 +218,12 @@ class _DonationDetailScreenState extends State<DonationDetailScreen> {
                        },
                      ),
                    ),
-                   SizedBox(
-                     width: double.infinity,
-                     height: 48,
-                     child: ElevatedButton(
-                       onPressed: () {},
-                       style: ElevatedButton.styleFrom(
-                         backgroundColor: GAppColors.buttonColor,
-                         // Button background color
-                         foregroundColor: Colors.white,
-                         // Text color
-                         shape: RoundedRectangleBorder(
-                           borderRadius:
-                           BorderRadius.circular(6), // Rounded corners
-                         ),
-                       ),
-                       child: Text(
-                         GText.continueText, // Corrected spelling from "Ligin"
-                         style: AppTextStyle.inter(
-                             color: Colors.white,
-                             fontSize: 16.0,
-                             weight: FontWeight.w500),
-                       ),
-                     ),
-                   ),
+
+                   SizedBox(height: GSizes.spaceBtwSections,),
+
+
+                   SizedBox(height: GSizes.spaceBtwSections,),
+
                  ],
                ),)
             ],

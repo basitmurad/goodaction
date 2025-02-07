@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:goodaction/screen/dashboard/widgets/PostWidget.dart';
 import 'package:goodaction/screen/location/location_screen.dart';
 import 'package:goodaction/screen/utils/constants/app_text_style.dart';

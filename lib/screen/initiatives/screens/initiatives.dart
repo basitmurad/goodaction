@@ -339,7 +339,7 @@ class _InitiativesScreenState extends State<InitiativesScreen>
         onPageChanged: (index) {
           setState(() {
             _selectedIndex = index;
-            _tabController.index = index;  // Sync TabController with PageView
+            _tabController.index = index; // Sync TabController with PageView
           });
         },
         children: const [
@@ -351,7 +351,10 @@ class _InitiativesScreenState extends State<InitiativesScreen>
   }
 
   Widget _buildTab(
-      {required int index, required String iconPath, required String text}) {bool isSelected = _selectedIndex == index;Color bgColor = isSelected ? Colors.black : Colors.transparent;Color iconTextColor = isSelected ? Colors.white : Colors.grey;
+      {required int index, required String iconPath, required String text}) {
+    bool isSelected = _selectedIndex == index;
+    Color bgColor = isSelected ? Colors.black : Colors.transparent;
+    Color iconTextColor = isSelected ? Colors.white : Colors.grey;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6.0),

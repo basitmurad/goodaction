@@ -13,5 +13,8 @@ class GImages {
   static const String frame_1  = "assets/svgiocon/frame_1.svg";
   static const String profile  = "assets/images/profile.png";
   static const String img  = "assets/images/img.png";
+  static const String master  = "assets/icons/master.png";
+  static const String themew  = "assets/icons/themew.png";
+  static const String success  = "assets/icons/success.png";
 
 }

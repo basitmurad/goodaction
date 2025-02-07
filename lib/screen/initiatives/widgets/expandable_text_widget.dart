@@ -66,7 +66,7 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
                       },
                       child: Text(
                         isExpanded ? "See Less" : "See More",
-                        style: const TextStyle(color: Colors.blue),
+                        style: const TextStyle(color: Colors.green),
                       ),
                     ),
                 ],

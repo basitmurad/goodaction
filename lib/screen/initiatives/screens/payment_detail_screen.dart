@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/initiatives/screens/payment_success_screen.dart';
 import 'package:goodaction/screen/utils/common_providers/text_field_widget.dart';
 import 'package:goodaction/screen/utils/constants/image_string.dart';
@@ -23,7 +24,7 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () {
-              Get.back();
+              context.go("/navigation");
             },
             icon: Icon(
               CupertinoIcons.arrow_left,
@@ -121,7 +122,9 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
                 height: 48,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(PaymentSuccessScreen());
+
+                    context.go("/paymentSuccessScreen");
+
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: GAppColors.buttonColor,

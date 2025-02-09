@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/dashboard/dashboard.dart';
 import 'package:goodaction/screen/initiatives/screens/initiatives.dart';
 import 'package:goodaction/screen/post/post.dart';
@@ -19,7 +20,8 @@ class NavigationMenu extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
 
-          Get.to(() => Post());
+          context.go("/post");
+
         },
         backgroundColor: Colors.black, // Customize FAB color
         shape: const CircleBorder(), // Keeps FAB circular
@@ -30,7 +32,7 @@ class NavigationMenu extends StatelessWidget {
 
 
 
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 70,
         child: BottomAppBar(
           shape: const CircularNotchedRectangle(), // Creates FAB cutout

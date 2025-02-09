@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/login/login_screen.dart';
 import 'package:goodaction/screen/utils/constants/image_string.dart';
 import '../utils/constants/app_text_style.dart';
@@ -66,7 +67,7 @@ class _EmailSendSendScreenState extends State<EmailSendSendScreen> {
                   child: ElevatedButton(
                     onPressed: () {
 
-                      Get.to(LoginScreen());
+                      context.go("/loginScreen");
 
                     },
                     style: ElevatedButton.styleFrom(

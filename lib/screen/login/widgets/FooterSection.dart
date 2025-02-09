@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../sign_up/signup_screen.dart';
 import '../../utils/constants/app_text_style.dart';
@@ -29,6 +30,8 @@ class FooterSection extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
+
+            context.go("/signUpScreen");
 
             Get.to(() => SignUpScreen());
           },

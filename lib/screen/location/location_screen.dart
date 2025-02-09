@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/location/widgets/header.dart';
 import 'package:goodaction/screen/utils/common_providers/text_field_widget.dart';
 import 'package:goodaction/screen/utils/constants/app_text_style.dart';
@@ -24,7 +24,8 @@ class _LocationScreenState extends State<LocationScreen> {
           GestureDetector(
 
             onTap: (){
-              Get.back();
+
+              context.go("/navigation");
             },
             child: SvgPicture.asset(
               'assets/svgiocon/cross.svg',

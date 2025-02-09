@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/login/login_screen.dart';
 import '../../utils/constants/app_text_style.dart';
 import '../../utils/constants/sizes.dart';
@@ -30,7 +31,7 @@ class Footer extends StatelessWidget {
         ),
 
         TextButton(onPressed: (){
-          Get.to(()=>LoginScreen());
+          context.go("/loginScreen");
         }, child:         Text(
           GText.login, // Corrected spelling from "Ligin"
           style: AppTextStyle.inter(

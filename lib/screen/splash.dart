@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/utils/constants/colors.dart';
 import 'package:goodaction/screen/utils/constants/image_string.dart';
 
@@ -21,10 +22,7 @@ class _SplashState extends State<Splash> {
 
     // Navigate to Login Screen after 2 seconds
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
-      );
+      context.go('/loginScreen');
     });
   }
   @override

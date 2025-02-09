@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/utils/constants/sizes.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -91,7 +92,8 @@ class _PostState extends State<Post> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      Get.back();
+                      context.go("/navigation");
+
                     },
                     icon: SvgPicture.asset(
                       'assets/svgiocon/cross.svg',

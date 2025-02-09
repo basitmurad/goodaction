@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/dashboard/post_detail.dart';
 import '../../utils/constants/app_text_style.dart';
 import '../../utils/constants/image_string.dart';
@@ -156,7 +157,9 @@ class _PostWidgetState extends State<PostWidget> {
               GestureDetector(
                 onTap: () {
 
-                  Get.to(PostDetail());
+                  context.go("/postDetail");
+
+
                   },
                 child: SvgPicture.asset(
                   "assets/svgiocon/message.svg",

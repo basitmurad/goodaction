@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/navigation_menu.dart';
 import 'package:goodaction/screen/utils/constants/colors.dart';
 import 'package:goodaction/screen/utils/constants/image_string.dart';
@@ -174,7 +175,8 @@ class _PaymentSuccessScreenState extends State<PaymentSuccessScreen> {
                 child: ElevatedButton(
                   onPressed: () {
 
-                    Get.offAll(NavigationMenu());
+                    context.go("/navigation");
+
 
                   },
                   style: ElevatedButton.styleFrom(

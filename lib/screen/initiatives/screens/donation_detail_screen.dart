@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/initiatives/screens/donation_now_screen.dart';
 import 'package:goodaction/screen/initiatives/widgets/character_image_widget.dart';
 import 'package:goodaction/screen/initiatives/widgets/expandable_text_widget.dart';
@@ -29,7 +30,9 @@ class _DonationDetailScreenState extends State<DonationDetailScreen> {
           child: ElevatedButton(
             onPressed: () {
 
-              Get.to(()=>DonationNowScreen());
+              context.go("/donationNowScreen");
+
+
 
 
             },
@@ -59,7 +62,7 @@ class _DonationDetailScreenState extends State<DonationDetailScreen> {
           leading: IconButton(
               onPressed: () {
 
-                Get.back();
+                context.go("/navigation");
               },
               icon: Icon(
                 CupertinoIcons.arrow_left,

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../utils/constants/app_text_style.dart';
 import '../../utils/constants/image_string.dart';
@@ -26,8 +27,8 @@ class OngoingInitiatives extends StatelessWidget {
                     return GestureDetector(
                       onTap: (){
 
+                        context.go("/donationDetailScreen");
 
-                        Get.to(() =>DonationDetailScreen());
 
                       },
                       child: Container(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/utils/device/device_utility.dart';
 import '../utils/constants/app_text_style.dart';
 import '../utils/constants/image_string.dart';
@@ -118,7 +119,9 @@ class _PostDetailState extends State<PostDetail> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   IconButton(
-                    onPressed: () => Get.back(),
+                    onPressed: (){
+                      context.go("/navigation");
+                    },
                     icon: Icon(Icons.arrow_back_ios_new_outlined, size: 18),
                   ),
                   SizedBox(width: 6),

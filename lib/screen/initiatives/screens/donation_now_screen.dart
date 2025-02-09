@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/initiatives/screens/payment_detail_screen.dart';
 import 'package:goodaction/screen/utils/constants/colors.dart';
 import 'package:goodaction/screen/utils/constants/sizes.dart';
@@ -24,7 +24,7 @@ class _DonationNowScreenState extends State<DonationNowScreen> {
           automaticallyImplyLeading: false,
           leading: IconButton(
               onPressed: () {
-                Get.back();
+                context.go("/navigation");
               },
               icon: Icon(
                 CupertinoIcons.arrow_left,
@@ -222,6 +222,8 @@ class _DonationNowScreenState extends State<DonationNowScreen> {
                     setState(() {
                       _selectedOption = 1; // Set selected option
                     });
+                    context.go("/paymentDetailScreen");
+
                     Navigator.push(
                       context,
                       MaterialPageRoute(

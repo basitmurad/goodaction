@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/navigation_menu.dart';
 import 'package:goodaction/screen/forget_password/forget_password.dart';
 import 'package:goodaction/screen/login/widgets/FooterSection.dart';
@@ -100,7 +101,8 @@ class _FormWidgetState extends State<FormWidget> {
         ),
         GestureDetector(
           onTap: () {
-            Get.to(ForgetPassword());
+            context.go("/forgetPassword");
+
           },
           child: Align(
             alignment: Alignment.bottomRight,
@@ -115,34 +117,33 @@ class _FormWidgetState extends State<FormWidget> {
           height: GSizes.lg + 20,
         ),
 
-        SizedBox(
-          width: double.infinity,
-          height: 48,
-          child: ElevatedButton(
-            onPressed: () {
+          SizedBox(
+            width: double.infinity,
+            height: 48,
+            child: ElevatedButton(
+              onPressed: () {
 
-              Get.to(NavigationMenu());
-
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: GAppColors.buttonColor,
-              // Button background color
-              foregroundColor: Colors.white,
-              // Text color
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(6), // Rounded corners
-// Rounded corners
+                context.go('/navigation');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: GAppColors.buttonColor,
+                // Button background color
+                foregroundColor: Colors.white,
+                // Text color
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6), // Rounded corners
+  // Rounded corners
+                ),
+              ),
+              child: Text(
+                GText.login, // Corrected spelling from "Ligin"
+                style: AppTextStyle.inter(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                    weight: FontWeight.w500),
               ),
             ),
-            child: Text(
-              GText.login, // Corrected spelling from "Ligin"
-              style: AppTextStyle.inter(
-                  color: Colors.white,
-                  fontSize: 16.0,
-                  weight: FontWeight.w500),
-            ),
           ),
-        ),
 
       ],
     );

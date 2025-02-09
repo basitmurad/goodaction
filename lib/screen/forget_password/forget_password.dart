@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/forget_password/email_send_send_screen.dart';
 import 'package:goodaction/screen/utils/common_providers/text_field_widget.dart';
 import 'package:goodaction/screen/utils/constants/app_text_style.dart';
@@ -26,7 +27,13 @@ class _ForgetPasswordState extends State<ForgetPassword> {
         backgroundColor: GAppColors.backColor,
 
         automaticallyImplyLeading: false,
-        leading: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.back)),
+        leading: IconButton(onPressed: (){
+
+
+          context.go("/loginScreen");
+
+
+        }, icon: Icon(CupertinoIcons.back)),
       ),
 
       body: Padding(padding: EdgeInsets.symmetric(vertical: 16,horizontal: 24),
@@ -56,7 +63,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             height: 48,
             child: ElevatedButton(
               onPressed: () {
-                Get.to(EmailSendSendScreen());
+                context.go("/emailSendSendScreen");
+
 
               },
               style: ElevatedButton.styleFrom(

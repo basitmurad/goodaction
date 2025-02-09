@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goodaction/screen/dashboard/widgets/PostWidget.dart';
 import 'package:goodaction/screen/location/location_screen.dart';
 import 'package:goodaction/screen/utils/constants/app_text_style.dart';
@@ -60,8 +61,7 @@ class _DashboardState extends State<Dashboard> {
                     angle: 80.1,
                     child: IconButton(
                         onPressed: () {
-
-                          Get.to(() =>LocationScreen());
+                          context.go("/locationScreen");
                         },
                         icon: Icon(
                           CupertinoIcons.back,
@@ -104,13 +104,12 @@ class _DashboardState extends State<Dashboard> {
               SizedBox(
                 height: 500,
                 child: ListView.builder(
-                  itemCount: 5,  // Limits to 5 items
+                  itemCount: 5, // Limits to 5 items
                   itemBuilder: (context, index) {
                     return PostWidget();
                   },
                 ),
               )
-
             ],
           ),
         ),
@@ -118,5 +117,3 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 }
-
-
